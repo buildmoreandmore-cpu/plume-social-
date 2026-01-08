@@ -6,7 +6,7 @@ import Retreats from './components/Retreats';
 import SampleItinerary from './components/SampleItinerary';
 import ApplicationForm from './components/ApplicationForm';
 import AIGuide from './components/AIGuide';
-import { MEMBERSHIP_TIERS, TRIPS, EDUCATIONAL_PILLARS } from './constants';
+import { MEMBERSHIP_TIERS, EDUCATIONAL_PILLARS } from './constants';
 
 const App: React.FC = () => {
   // Initialize scroll animations
@@ -115,48 +115,6 @@ const App: React.FC = () => {
         {/* Sample Itinerary - Phoenix Example */}
         <SampleItinerary />
 
-        {/* Trips Showcase */}
-        <section id="trips" className="py-24 px-4 bg-plume-burgundy text-white overflow-hidden">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end mb-16">
-            <div className="max-w-2xl">
-              <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Curated Experiences</h3>
-              <h2 className="font-serif text-4xl md:text-5xl italic mb-6">Intentional Journeys</h2>
-              <p className="text-plume-cream/70 text-lg">
-                Exclusive to the Plume Circle. These journeys are the heart of our community. 
-                <strong> Apply for entry to unlock the world.</strong>
-              </p>
-            </div>
-            <div className="flex flex-col items-end">
-              <p className="text-xs tracking-widest text-plume-gold mb-4 uppercase italic">Invitation Required to Book</p>
-              <button className="hidden md:block px-8 py-3 border border-plume-gold text-plume-gold font-bold tracking-widest text-xs hover:bg-plume-gold hover:text-plume-burgundy transition-all">
-                PREVIEW TRIPS
-              </button>
-            </div>
-          </div>
-
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TRIPS.map((trip, i) => (
-              <div key={i} className="group relative overflow-hidden rounded-sm aspect-[3/4]">
-                <img 
-                  src={trip.imageUrl} 
-                  alt={trip.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-plume-burgundy via-transparent to-transparent opacity-80" />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <span className="text-plume-teal text-xs font-sans tracking-[0.2em] mb-2 uppercase">{trip.type}</span>
-                  <h4 className="text-2xl font-serif italic mb-2">{trip.title}</h4>
-                  <p className="text-sm text-plume-cream/80 mb-4 line-clamp-2">{trip.description}</p>
-                  <div className="flex justify-between items-center pt-4 border-t border-white/20">
-                    <span className="text-sm font-bold tracking-wide">{trip.location}</span>
-                    <span className="text-plume-gold font-serif italic text-xs uppercase tracking-widest">{trip.price}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Education Pillars */}
         <section id="education" className="py-24 px-4 bg-plume-cream">
           <div className="max-w-7xl mx-auto text-center mb-16">
@@ -229,8 +187,8 @@ const App: React.FC = () => {
               <li><a href="#about" className="hover:text-plume-gold transition-colors">The Foundation</a></li>
               <li><a href="#membership" className="hover:text-plume-gold transition-colors">The Circle</a></li>
               <li><a href="#retreats" className="hover:text-plume-gold transition-colors">Luxury Retreats</a></li>
-              <li><a href="#trips" className="hover:text-plume-gold transition-colors">Experiences</a></li>
               <li><a href="#education" className="hover:text-plume-gold transition-colors">Elevation</a></li>
+              <li><a href="#apply" className="hover:text-plume-gold transition-colors">Join Us</a></li>
             </ul>
           </div>
 

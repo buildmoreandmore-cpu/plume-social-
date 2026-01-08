@@ -189,62 +189,6 @@ const Retreats: React.FC = () => {
         </div>
       </div>
 
-      {/* Pricing */}
-      <div className="py-20 px-4 bg-plume-cream">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">Investment</h3>
-            <h2 className="text-plume-burgundy font-serif text-3xl md:text-5xl italic mb-4 animate-on-scroll">
-              Retreat Packages
-            </h2>
-            <p className="text-plume-charcoal/70 max-w-2xl mx-auto animate-on-scroll">
-              Attendees are responsible for their own travel and hotel stay. Limited spots available per retreat. Must be a Circle member to book.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {PRICING.map((pkg, i) => (
-              <div key={i} className={`rounded-sm overflow-hidden animate-on-scroll delay-${i + 1} ${i === 1 ? 'border-2 border-plume-gold' : 'border border-plume-burgundy/20'}`}>
-                <div className={`p-8 text-center ${i === 1 ? 'bg-plume-burgundy text-white' : 'bg-white'}`}>
-                  <h4 className={`font-sans tracking-[0.2em] text-sm mb-4 uppercase ${i === 1 ? 'text-plume-gold' : 'text-plume-burgundy'}`}>
-                    {pkg.tier}
-                    {i === 1 && <span className="ml-2 text-xs bg-plume-gold text-plume-burgundy px-2 py-1 rounded-full">POPULAR</span>}
-                  </h4>
-                  <div className="mb-2">
-                    <span className="text-sm opacity-70">Domestic:</span>
-                    <span className="font-serif italic text-3xl ml-2">{pkg.domestic}</span>
-                  </div>
-                  <div>
-                    <span className="text-sm opacity-70">International:</span>
-                    <span className="font-serif italic text-3xl ml-2">{pkg.international}</span>
-                  </div>
-                </div>
-                <div className="p-8 bg-white">
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, j) => (
-                      <li key={j} className="flex items-start text-sm text-plume-charcoal/80">
-                        <span className="text-plume-gold mr-3">+</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    onClick={scrollToApply}
-                    className={`w-full mt-8 py-4 font-bold tracking-widest text-xs uppercase transition-all ${
-                      i === 1
-                        ? 'bg-plume-gold text-plume-burgundy hover:bg-opacity-90'
-                        : 'bg-plume-burgundy text-white hover:bg-opacity-90'
-                    }`}
-                  >
-                    Join Circle to Book
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* CTA */}
       <div className="py-24 px-4 bg-plume-burgundy">
         <div className="max-w-3xl mx-auto text-center text-white">

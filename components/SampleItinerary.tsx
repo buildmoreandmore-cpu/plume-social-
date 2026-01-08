@@ -68,15 +68,6 @@ const SampleItinerary: React.FC = () => {
           </p>
         </div>
 
-        {/* Price Badge */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-plume-burgundy text-white px-8 py-4 rounded-sm text-center">
-            <p className="text-plume-gold text-xs tracking-widest uppercase mb-1">Starting at</p>
-            <p className="font-serif italic text-3xl">$1,750</p>
-            <p className="text-xs text-plume-cream/70">per person • 4 days</p>
-          </div>
-        </div>
-
         {/* Day Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {ITINERARY_DAYS.map((day, i) => (
