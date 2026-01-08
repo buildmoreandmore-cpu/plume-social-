@@ -36,14 +36,14 @@ const App: React.FC = () => {
               </div>
               <div className="relative">
                 <div className="aspect-[4/5] bg-plume-burgundy rounded-sm overflow-hidden shadow-2xl">
-                  <img 
-                    src="https://images.unsplash.com/photo-1571166311099-92161bc3d24a?auto=format&fit=crop&q=80&w=1000" 
+                  <img
+                    src="https://images.unsplash.com/photo-1571166311099-92161bc3d24a?auto=format&fit=crop&q=80&w=1000"
                     className="w-full h-full object-cover mix-blend-multiply opacity-80"
                     alt="Women laughing over drinks"
                   />
                 </div>
-                <div className="absolute -bottom-8 -left-8 bg-plume-gold p-8 rounded-sm shadow-xl hidden md:block">
-                  <p className="font-serif italic text-2xl text-plume-burgundy">"The sisterhood you've been searching for."</p>
+                <div className="absolute -bottom-12 -left-8 bg-plume-cream p-6 rounded-sm shadow-xl hidden md:block border border-plume-gold/30">
+                  <img src="/assets/logo-badge.png" alt="Plume Social Club" className="h-28 w-auto" />
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ const App: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-plume-burgundy via-transparent to-transparent opacity-80" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <span className="text-plume-gold text-xs font-sans tracking-[0.2em] mb-2 uppercase">{trip.type}</span>
+                  <span className="text-plume-teal text-xs font-sans tracking-[0.2em] mb-2 uppercase">{trip.type}</span>
                   <h4 className="text-2xl font-serif italic mb-2">{trip.title}</h4>
                   <p className="text-sm text-plume-cream/80 mb-4 line-clamp-2">{trip.description}</p>
                   <div className="flex justify-between items-center pt-4 border-t border-white/20">
@@ -139,7 +139,7 @@ const App: React.FC = () => {
           
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {EDUCATIONAL_PILLARS.map((pillar, i) => (
-              <div key={i} className="bg-white p-8 rounded-sm border border-plume-gold/10 hover:border-plume-gold transition-colors">
+              <div key={i} className="bg-white p-8 rounded-sm border border-plume-teal/20 hover:border-plume-gold transition-colors">
                 <div className="text-4xl mb-6">{pillar.icon}</div>
                 <h4 className="text-xl font-serif italic text-plume-burgundy mb-6">{pillar.title}</h4>
                 <ul className="space-y-3">
@@ -177,16 +177,19 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-6">
-              <span className="font-serif text-3xl font-bold text-plume-burgundy italic">Plume</span>
-              <span className="font-sans text-xs tracking-[0.2em] ml-2 text-plume-charcoal font-semibold">SOCIAL</span>
+              <img
+                src="/assets/logo-horizontal.png"
+                alt="Plume Social Club"
+                className="h-14 w-auto"
+              />
             </div>
             <p className="text-plume-charcoal/60 max-w-sm mb-8">
               A private sanctuary for accomplished Black women to navigate their next chapter through shared indulgence and sisterhood. No fees, just intention.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-plume-charcoal hover:text-plume-gold transition-colors">Instagram</a>
-              <a href="#" className="text-plume-charcoal hover:text-plume-gold transition-colors">LinkedIn</a>
-              <a href="#" className="text-plume-charcoal hover:text-plume-gold transition-colors">Facebook</a>
+              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors">Instagram</a>
+              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors">LinkedIn</a>
+              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors">Facebook</a>
             </div>
           </div>
           
@@ -211,7 +214,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-plume-gold/10 text-center text-xs text-plume-charcoal/40 tracking-widest">
-          © {new Date().getFullYear()} PLUME SOCIAL. ALL RIGHTS RESERVED. NO ENTRY FEE. INDULGENCE MEETS INTENTION.
+          © {new Date().getFullYear()} PLUME SOCIAL CLUB. ALL RIGHTS RESERVED. NO ENTRY FEE. INDULGENCE MEETS INTENTION.
         </div>
       </footer>
 

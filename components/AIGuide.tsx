@@ -92,11 +92,11 @@ const AIGuide: React.FC = () => {
           </div>
         </div>
       ) : (
-        <button 
+        <button
           onClick={() => setIsOpen(true)}
-          className="bg-plume-burgundy w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-transform border-4 border-plume-gold/30 group"
+          className="bg-plume-burgundy w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-transform border-4 border-plume-gold/30 group overflow-hidden"
         >
-          <span className="text-2xl group-hover:rotate-12 transition-transform italic font-serif">P</span>
+          <img src="/assets/logo-icon.png" alt="Plume Guide" className="w-12 h-12 object-contain group-hover:scale-110 transition-transform" />
         </button>
       )}
     </div>

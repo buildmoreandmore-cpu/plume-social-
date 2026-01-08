@@ -7,8 +7,11 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
-            <span className="font-serif text-3xl font-bold text-plume-burgundy italic">Plume</span>
-            <span className="font-sans text-xs tracking-[0.2em] ml-2 text-plume-charcoal font-semibold">SOCIAL</span>
+            <img
+              src="/assets/logo-horizontal.png"
+              alt="Plume Social Club"
+              className="h-12 w-auto"
+            />
           </div>
           <div className="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide">
             <a href="#about" className="hover:text-plume-gold transition-colors">THE FOUNDATION</a>
