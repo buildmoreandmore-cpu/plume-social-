@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Retreats from './components/Retreats';
 import AIGuide from './components/AIGuide';
 import { MEMBERSHIP_TIERS, TRIPS, EDUCATIONAL_PILLARS } from './constants';
 
@@ -87,6 +88,9 @@ const App: React.FC = () => {
             ))}
           </div>
         </section>
+
+        {/* Luxury Retreats */}
+        <Retreats />
 
         {/* Trips Showcase */}
         <section id="trips" className="py-24 px-4 bg-plume-burgundy text-white overflow-hidden">
@@ -198,6 +202,7 @@ const App: React.FC = () => {
             <ul className="space-y-4 text-sm text-plume-charcoal/60">
               <li><a href="#about" className="hover:text-plume-gold transition-colors">The Foundation</a></li>
               <li><a href="#membership" className="hover:text-plume-gold transition-colors">The Circle</a></li>
+              <li><a href="#retreats" className="hover:text-plume-gold transition-colors">Luxury Retreats</a></li>
               <li><a href="#trips" className="hover:text-plume-gold transition-colors">Experiences</a></li>
               <li><a href="#education" className="hover:text-plume-gold transition-colors">Elevation</a></li>
             </ul>
@@ -206,8 +211,8 @@ const App: React.FC = () => {
           <div>
             <h5 className="font-sans tracking-widest text-xs font-bold mb-6 uppercase">Contact</h5>
             <ul className="space-y-4 text-sm text-plume-charcoal/60">
-              <li>sisterhood@plumesocial.com</li>
-              <li>Atlanta, GA • Houston, TX • DC</li>
+              <li><a href="mailto:akua@plumesocialclub.net" className="hover:text-plume-gold transition-colors">akua@plumesocialclub.net</a></li>
+              <li>Atlanta, GA • Tampa, FL • DC</li>
               <li>Privacy Policy</li>
               <li>Terms of Membership</li>
             </ul>
