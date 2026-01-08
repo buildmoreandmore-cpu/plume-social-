@@ -3,6 +3,8 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Retreats from './components/Retreats';
+import SampleItinerary from './components/SampleItinerary';
+import ApplicationForm from './components/ApplicationForm';
 import AIGuide from './components/AIGuide';
 import { MEMBERSHIP_TIERS, TRIPS, EDUCATIONAL_PILLARS } from './constants';
 
@@ -92,6 +94,9 @@ const App: React.FC = () => {
         {/* Luxury Retreats */}
         <Retreats />
 
+        {/* Sample Itinerary - Phoenix Example */}
+        <SampleItinerary />
+
         {/* Trips Showcase */}
         <section id="trips" className="py-24 px-4 bg-plume-burgundy text-white overflow-hidden">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end mb-16">
@@ -158,6 +163,9 @@ const App: React.FC = () => {
             ))}
           </div>
         </section>
+
+        {/* Application Form */}
+        <ApplicationForm />
 
         {/* Sponsorship / The Floor */}
         <section className="py-24 px-4 bg-plume-charcoal text-white relative overflow-hidden">
