@@ -34,36 +34,6 @@ const RETREAT_EXPERIENCES = [
   }
 ];
 
-const DOMESTIC_LOCATIONS = [
-  'Tampa, FL', 'Miami, FL', 'Las Vegas, NV', 'New York, NY',
-  'Santa Barbara, CA', 'Los Angeles, CA', 'Louisville, KY', 'Washington, DC'
-];
-
-const INTERNATIONAL_LOCATIONS = [
-  { name: 'Partagas Factory', country: 'Cuba' },
-  { name: 'La Flor Dominicana Factory', country: 'Dominican Republic' },
-  { name: 'Chateau A. Fuente', country: 'Dominican Republic' },
-  { name: 'My Father Cigar Factory', country: 'Nicaragua' },
-  { name: 'Drew Estate', country: 'Nicaragua' },
-  { name: 'London', country: 'England' },
-  { name: 'Dubai', country: 'UAE' }
-];
-
-const PRICING = [
-  {
-    tier: 'Lavish Diamond',
-    domestic: '$5,000',
-    international: '$10,000',
-    features: ['4-day curated experience', 'Private dinners & brunches', 'All activities included', 'Cigar tastings & pairings', 'Wellness day access']
-  },
-  {
-    tier: 'Opulent Platinum',
-    domestic: '$8,500',
-    international: '$12,500',
-    features: ['Everything in Diamond', 'Exclusive swag gifts', 'VIP seating at all events', 'VIP travel on excursions', 'Hair/makeup artist access']
-  }
-];
-
 const Retreats: React.FC = () => {
   const scrollToApply = () => {
     document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
@@ -142,49 +112,6 @@ const Retreats: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Locations */}
-      <div className="py-20 px-4 bg-plume-ivory">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">Destinations</h3>
-            <h2 className="text-plume-burgundy font-serif text-3xl md:text-5xl italic mb-4 animate-on-scroll">
-              3 Domestic & 1 International Annually
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Domestic */}
-            <div className="animate-slide-left">
-              <h4 className="font-serif italic text-2xl text-plume-burgundy mb-6">
-                Domestic Retreats
-              </h4>
-              <div className="grid grid-cols-2 gap-3">
-                {DOMESTIC_LOCATIONS.map((loc, i) => (
-                  <div key={i} className="bg-white p-4 rounded-sm border border-plume-teal/20 text-center">
-                    <span className="text-plume-charcoal font-medium">{loc}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* International */}
-            <div className="animate-slide-right">
-              <h4 className="font-serif italic text-2xl text-plume-burgundy mb-6">
-                International Retreats
-              </h4>
-              <div className="space-y-3">
-                {INTERNATIONAL_LOCATIONS.map((loc, i) => (
-                  <div key={i} className="bg-white p-4 rounded-sm border border-plume-teal/20 flex justify-between items-center">
-                    <span className="text-plume-charcoal font-medium">{loc.name}</span>
-                    <span className="text-plume-teal text-sm">{loc.country}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
