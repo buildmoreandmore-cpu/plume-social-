@@ -22,12 +22,12 @@ const Hero: React.FC = () => {
           The private sanctuary for accomplished Black women to exhale, build legacy, and navigate life's finest pleasures together.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm">
-            APPLY FOR MEMBERSHIP
-          </button>
-          <button className="border border-white text-white px-10 py-4 font-bold tracking-widest rounded-sm hover:bg-white hover:text-plume-burgundy transition-all text-sm">
-            EXPLORE TRIPS
-          </button>
+          <a href="#apply" className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm">
+            REQUEST AN INVITATION
+          </a>
+          <a href="#retreats" className="border border-white text-white px-10 py-4 font-bold tracking-widest rounded-sm hover:bg-white hover:text-plume-burgundy transition-all text-sm">
+            VIEW RETREATS
+          </a>
         </div>
       </div>
 
