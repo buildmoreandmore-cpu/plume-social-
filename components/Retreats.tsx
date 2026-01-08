@@ -3,7 +3,6 @@ import React from 'react';
 
 const RETREAT_EXPERIENCES = [
   {
-    icon: '🚬',
     title: 'Sophisticated Cigar Experience',
     features: [
       'Exclusive cigar tastings led by expert sommeliers',
@@ -14,7 +13,6 @@ const RETREAT_EXPERIENCES = [
     ]
   },
   {
-    icon: '🧘',
     title: 'Wellness Day',
     features: [
       'Yoga, Meditation & Spa Treatments',
@@ -25,7 +23,6 @@ const RETREAT_EXPERIENCES = [
     ]
   },
   {
-    icon: '🎨',
     title: 'Highlight Day: All About Cigars',
     features: [
       'Private guided Cigar Factory Tour',
@@ -43,7 +40,7 @@ const DOMESTIC_LOCATIONS = [
 ];
 
 const INTERNATIONAL_LOCATIONS = [
-  { name: 'Partagás Factory', country: 'Cuba' },
+  { name: 'Partagas Factory', country: 'Cuba' },
   { name: 'La Flor Dominicana Factory', country: 'Dominican Republic' },
   { name: 'Chateau A. Fuente', country: 'Dominican Republic' },
   { name: 'My Father Cigar Factory', country: 'Nicaragua' },
@@ -68,26 +65,30 @@ const PRICING = [
 ];
 
 const Retreats: React.FC = () => {
+  const scrollToApply = () => {
+    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="retreats" className="scroll-mt-20">
-      {/* Hero */}
-      <div className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <img
-          src="/assets/retreat-cigars.jpeg"
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="Women enjoying cigars"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-plume-burgundy/70 via-plume-burgundy/50 to-plume-burgundy/80" />
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <p className="text-plume-gold font-sans tracking-[0.4em] text-sm mb-4 uppercase">The Cigar Plume Collective Presents</p>
-          <h2 className="text-white font-serif text-4xl md:text-6xl italic mb-6">
+      {/* Hero - Solid Background */}
+      <div className="relative py-24 px-4 bg-plume-burgundy">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-plume-gold font-sans tracking-[0.4em] text-sm mb-4 uppercase animate-on-scroll">The Cigar Plume Collective Presents</p>
+          <h2 className="text-white font-serif text-4xl md:text-6xl italic mb-6 animate-on-scroll">
             The Ultimate Luxury Retreat
           </h2>
-          <p className="text-plume-cream/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-plume-cream/90 text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-on-scroll">
             An exclusive experience for professional women who appreciate elegance, cigars, adventure, and relaxation.
           </p>
-          <button className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase">
-            Reserve Your Spot
+          <p className="text-plume-gold/80 text-sm mb-8 animate-on-scroll">
+            You must join the Circle before booking an experience.
+          </p>
+          <button
+            onClick={scrollToApply}
+            className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase animate-on-scroll"
+          >
+            Join The Circle First
           </button>
         </div>
       </div>
@@ -95,8 +96,8 @@ const Retreats: React.FC = () => {
       {/* Is This You? */}
       <div className="py-20 px-4 bg-plume-cream">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Is This You?</h3>
-          <h2 className="text-plume-burgundy font-serif text-3xl md:text-4xl italic mb-12">
+          <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">Is This You?</h3>
+          <h2 className="text-plume-burgundy font-serif text-3xl md:text-4xl italic mb-12 animate-on-scroll">
             Designed for the Woman Who Has It All... Almost
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -110,8 +111,8 @@ const Retreats: React.FC = () => {
               'Need positive inspirational activities',
               'Ready for good girlfriend bonding time'
             ].map((item, i) => (
-              <div key={i} className="flex items-start bg-white p-4 rounded-sm border border-plume-teal/20">
-                <span className="text-plume-gold mr-3 text-lg">✦</span>
+              <div key={i} className={`flex items-start bg-white p-4 rounded-sm border border-plume-teal/20 animate-on-scroll delay-${(i % 4) + 1}`}>
+                <span className="text-plume-gold mr-3 text-lg">+</span>
                 <span className="text-plume-charcoal">{item}</span>
               </div>
             ))}
@@ -123,19 +124,18 @@ const Retreats: React.FC = () => {
       <div className="py-20 px-4 bg-plume-burgundy text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">The Experience</h3>
-            <h2 className="font-serif text-3xl md:text-5xl italic">4-Day Retreat Agenda</h2>
+            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">The Experience</h3>
+            <h2 className="font-serif text-3xl md:text-5xl italic animate-on-scroll">4-Day Retreat Agenda</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {RETREAT_EXPERIENCES.map((exp, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm p-8 rounded-sm border border-plume-gold/20">
-                <div className="text-4xl mb-4">{exp.icon}</div>
+              <div key={i} className={`bg-white/10 backdrop-blur-sm p-8 rounded-sm border border-plume-gold/20 animate-on-scroll delay-${i + 1}`}>
                 <h4 className="font-serif italic text-xl mb-6 text-plume-gold">{exp.title}</h4>
                 <ul className="space-y-3">
                   {exp.features.map((feature, j) => (
                     <li key={j} className="flex items-start text-sm text-plume-cream/80">
-                      <span className="text-plume-teal mr-2">•</span>
+                      <span className="text-plume-teal mr-2">-</span>
                       {feature}
                     </li>
                   ))}
@@ -150,17 +150,17 @@ const Retreats: React.FC = () => {
       <div className="py-20 px-4 bg-plume-ivory">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Destinations</h3>
-            <h2 className="text-plume-burgundy font-serif text-3xl md:text-5xl italic mb-4">
+            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">Destinations</h3>
+            <h2 className="text-plume-burgundy font-serif text-3xl md:text-5xl italic mb-4 animate-on-scroll">
               3 Domestic & 1 International Annually
             </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Domestic */}
-            <div>
-              <h4 className="font-serif italic text-2xl text-plume-burgundy mb-6 flex items-center">
-                <span className="text-plume-gold mr-3">🇺🇸</span> Domestic Retreats
+            <div className="animate-slide-left">
+              <h4 className="font-serif italic text-2xl text-plume-burgundy mb-6">
+                Domestic Retreats
               </h4>
               <div className="grid grid-cols-2 gap-3">
                 {DOMESTIC_LOCATIONS.map((loc, i) => (
@@ -172,9 +172,9 @@ const Retreats: React.FC = () => {
             </div>
 
             {/* International */}
-            <div>
-              <h4 className="font-serif italic text-2xl text-plume-burgundy mb-6 flex items-center">
-                <span className="text-plume-gold mr-3">🌍</span> International Retreats
+            <div className="animate-slide-right">
+              <h4 className="font-serif italic text-2xl text-plume-burgundy mb-6">
+                International Retreats
               </h4>
               <div className="space-y-3">
                 {INTERNATIONAL_LOCATIONS.map((loc, i) => (
@@ -193,18 +193,18 @@ const Retreats: React.FC = () => {
       <div className="py-20 px-4 bg-plume-cream">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Investment</h3>
-            <h2 className="text-plume-burgundy font-serif text-3xl md:text-5xl italic mb-4">
-              Pricing & Packages
+            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">Investment</h3>
+            <h2 className="text-plume-burgundy font-serif text-3xl md:text-5xl italic mb-4 animate-on-scroll">
+              Retreat Packages
             </h2>
-            <p className="text-plume-charcoal/70 max-w-2xl mx-auto">
-              Attendees are responsible for their own travel and hotel stay. Limited spots available per retreat.
+            <p className="text-plume-charcoal/70 max-w-2xl mx-auto animate-on-scroll">
+              Attendees are responsible for their own travel and hotel stay. Limited spots available per retreat. Must be a Circle member to book.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {PRICING.map((pkg, i) => (
-              <div key={i} className={`rounded-sm overflow-hidden ${i === 1 ? 'border-2 border-plume-gold' : 'border border-plume-burgundy/20'}`}>
+              <div key={i} className={`rounded-sm overflow-hidden animate-on-scroll delay-${i + 1} ${i === 1 ? 'border-2 border-plume-gold' : 'border border-plume-burgundy/20'}`}>
                 <div className={`p-8 text-center ${i === 1 ? 'bg-plume-burgundy text-white' : 'bg-white'}`}>
                   <h4 className={`font-sans tracking-[0.2em] text-sm mb-4 uppercase ${i === 1 ? 'text-plume-gold' : 'text-plume-burgundy'}`}>
                     {pkg.tier}
@@ -223,17 +223,20 @@ const Retreats: React.FC = () => {
                   <ul className="space-y-3">
                     {pkg.features.map((feature, j) => (
                       <li key={j} className="flex items-start text-sm text-plume-charcoal/80">
-                        <span className="text-plume-gold mr-3">✦</span>
+                        <span className="text-plume-gold mr-3">+</span>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <button className={`w-full mt-8 py-4 font-bold tracking-widest text-xs uppercase transition-all ${
-                    i === 1
-                      ? 'bg-plume-gold text-plume-burgundy hover:bg-opacity-90'
-                      : 'bg-plume-burgundy text-white hover:bg-opacity-90'
-                  }`}>
-                    Reserve Now
+                  <button
+                    onClick={scrollToApply}
+                    className={`w-full mt-8 py-4 font-bold tracking-widest text-xs uppercase transition-all ${
+                      i === 1
+                        ? 'bg-plume-gold text-plume-burgundy hover:bg-opacity-90'
+                        : 'bg-plume-burgundy text-white hover:bg-opacity-90'
+                    }`}
+                  >
+                    Join Circle to Book
                   </button>
                 </div>
               </div>
@@ -243,24 +246,21 @@ const Retreats: React.FC = () => {
       </div>
 
       {/* CTA */}
-      <div className="relative py-24 px-4 overflow-hidden">
-        <img
-          src="/assets/retreat-lounge.jpeg"
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="Luxury lounge setup"
-        />
-        <div className="absolute inset-0 bg-plume-burgundy/80" />
-        <div className="relative z-10 max-w-3xl mx-auto text-center text-white">
-          <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Don't Miss Out</h3>
-          <h2 className="font-serif text-3xl md:text-5xl italic mb-6">
-            Reserve Your Spot Now
+      <div className="py-24 px-4 bg-plume-burgundy">
+        <div className="max-w-3xl mx-auto text-center text-white">
+          <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase animate-on-scroll">Ready to Join?</h3>
+          <h2 className="font-serif text-3xl md:text-5xl italic mb-6 animate-on-scroll">
+            The Circle Awaits
           </h2>
-          <p className="text-plume-cream/80 text-lg mb-10 max-w-2xl mx-auto">
-            Join us for a private space to relax, rejuvenate, and bond with like-minded women while enjoying world-class cigars, luxurious spa treatments, and exploring new destinations.
+          <p className="text-plume-cream/80 text-lg mb-10 max-w-2xl mx-auto animate-on-scroll">
+            Join our sisterhood for exclusive access to luxury retreats, curated experiences, and a community of like-minded professional women.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase">
-              Apply Now
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-on-scroll">
+            <button
+              onClick={scrollToApply}
+              className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase"
+            >
+              Apply to Join
             </button>
             <a href="mailto:akua@plumesocialclub.net" className="border border-white text-white px-10 py-4 font-bold tracking-widest rounded-sm hover:bg-white hover:text-plume-burgundy transition-all text-sm uppercase">
               Contact Us

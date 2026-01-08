@@ -20,9 +20,9 @@ const Header: React.FC = () => {
             <a href="#apply" className="hover:text-plume-gold transition-colors">APPLY</a>
           </div>
           <div>
-            <button className="bg-plume-burgundy text-plume-cream px-6 py-2 rounded-sm text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all">
+            <a href="#apply" className="bg-plume-burgundy text-plume-cream px-6 py-2 rounded-sm text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all inline-block">
               JOIN THE CIRCLE
-            </button>
+            </a>
           </div>
         </div>
       </div>

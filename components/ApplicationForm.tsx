@@ -117,7 +117,7 @@ const ApplicationForm: React.FC = () => {
     return (
       <section id="apply" className="py-20 px-4 bg-plume-burgundy">
         <div className="max-w-2xl mx-auto text-center text-white">
-          <div className="text-6xl mb-6">✨</div>
+          <div className="text-6xl mb-6 font-serif italic text-plume-gold">Welcome</div>
           <h2 className="font-serif italic text-4xl mb-4">Welcome to the Circle, Sister</h2>
           <p className="text-plume-cream/80 text-lg mb-8">
             Your application has been received. We review each submission personally and will be in touch within 48 hours.

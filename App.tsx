@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Retreats from './components/Retreats';
@@ -9,6 +9,27 @@ import AIGuide from './components/AIGuide';
 import { MEMBERSHIP_TIERS, TRIPS, EDUCATIONAL_PILLARS } from './constants';
 
 const App: React.FC = () => {
+  // Initialize scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const elements = document.querySelectorAll(
+      '.animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-scale'
+    );
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen font-sans selection:bg-plume-gold selection:text-plume-burgundy">
       <Header />
@@ -20,7 +41,7 @@ const App: React.FC = () => {
         <section id="about" className="py-24 px-4 bg-plume-cream">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
+              <div className="animate-slide-left">
                 <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">The Foundation</h3>
                 <h2 className="text-plume-burgundy font-serif text-4xl md:text-5xl italic mb-8">
                   Transformation + Indulgence + Sisterhood
@@ -37,16 +58,13 @@ const App: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative animate-slide-right">
                 <div className="aspect-[4/5] bg-plume-burgundy rounded-sm overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1571166311099-92161bc3d24a?auto=format&fit=crop&q=80&w=1000"
-                    className="w-full h-full object-cover mix-blend-multiply opacity-80"
-                    alt="Women laughing over drinks"
+                    src="/assets/women-lounge.png"
+                    className="w-full h-full object-cover"
+                    alt="Women enjoying conversation in luxury lounge"
                   />
-                </div>
-                <div className="absolute -bottom-12 -left-8 bg-plume-cream p-6 rounded-sm shadow-xl hidden md:block border border-plume-gold/30">
-                  <img src="/assets/logo-badge.png" alt="Plume Social Club" className="h-28 w-auto" />
                 </div>
               </div>
             </div>
@@ -82,9 +100,9 @@ const App: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full py-4 bg-plume-burgundy text-white font-bold tracking-widest text-xs hover:bg-opacity-90 transition-all uppercase">
+                  <a href="#apply" className="w-full py-4 bg-plume-burgundy text-white font-bold tracking-widest text-xs hover:bg-opacity-90 transition-all uppercase block text-center">
                     Request an Invitation
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}

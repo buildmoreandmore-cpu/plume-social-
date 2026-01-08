@@ -63,21 +63,21 @@ export const EDUCATIONAL_PILLARS: EducationalPillar[] = [
   {
     title: 'Physical Wellness',
     topics: ['Hormones & Havana: Menopause Guide', 'Fitness after 50', 'Sleep Optimization'],
-    icon: '🌿'
+    icon: 'I'
   },
   {
     title: 'Mental & Emotional',
     topics: ['Empty Nest Navigation', 'Caregiver Burnout Recovery', 'Finding Joy Post-Career'],
-    icon: '✨'
+    icon: 'II'
   },
   {
     title: 'Financial Legacy',
     topics: ['Estate Planning 101', 'Retirement Strategy', 'Investing for Beginners'],
-    icon: '📈'
+    icon: 'III'
   },
   {
     title: 'Business Elevation',
     topics: ['Becoming a Coach', 'Monetizing Expertise', 'Personal Branding'],
-    icon: '👑'
+    icon: 'IV'
   }
 ];
