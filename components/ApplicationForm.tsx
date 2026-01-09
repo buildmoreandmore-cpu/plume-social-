@@ -115,15 +115,14 @@ const ApplicationForm: React.FC = () => {
 
   if (submitted) {
     return (
-      <section id="apply" className="py-20 px-4 bg-plume-burgundy">
-        <div className="max-w-2xl mx-auto text-center text-white">
-          <div className="text-6xl mb-6 font-serif italic text-plume-gold">Welcome</div>
-          <h2 className="font-serif italic text-4xl mb-4">Welcome to the Circle, Sister</h2>
-          <p className="text-plume-cream/80 text-lg mb-8">
+      <section id="apply" className="py-16 md:py-24 px-6 bg-plume-burgundy">
+        <div className="max-w-xl mx-auto text-center text-white">
+          <h2 className="font-serif italic text-3xl md:text-4xl mb-4">Thank You</h2>
+          <p className="text-plume-cream/80 text-base md:text-lg mb-6">
             Your application has been received. We review each submission personally and will be in touch within 48 hours.
           </p>
-          <p className="text-plume-gold font-serif italic text-xl">
-            "The sisterhood you've been searching for awaits."
+          <p className="text-plume-gold font-serif italic text-lg">
+            The sisterhood awaits.
           </p>
         </div>
       </section>
@@ -134,26 +133,26 @@ const ApplicationForm: React.FC = () => {
   const progress = ((currentStep + 1) / QUESTIONS.length) * 100;
 
   return (
-    <section id="apply" className="py-20 px-4 bg-plume-cream">
-      <div className="max-w-2xl mx-auto">
+    <section id="apply" className="py-16 md:py-24 px-6 bg-plume-cream">
+      <div className="max-w-xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Join Us</h3>
-          <h2 className="text-plume-burgundy font-serif text-3xl md:text-4xl italic mb-4">
+        <div className="text-center mb-10">
+          <h3 className="text-plume-gold font-sans tracking-[0.3em] text-xs mb-3 uppercase">Join Us</h3>
+          <h2 className="text-plume-burgundy font-serif text-2xl md:text-3xl italic mb-3">
             Request an Invitation
           </h2>
-          <p className="text-plume-charcoal/70">
-            Tell us a little about yourself. This helps us curate the perfect experience for you.
+          <p className="text-plume-charcoal/70 text-sm md:text-base">
+            Tell us a little about yourself.
           </p>
         </div>
 
         {/* Progress Bar */}
-        <div className="mb-8">
+        <div className="mb-6">
           <div className="flex justify-between text-xs text-plume-charcoal/60 mb-2">
             <span>Question {currentStep + 1} of {QUESTIONS.length}</span>
-            <span>{Math.round(progress)}% complete</span>
+            <span>{Math.round(progress)}%</span>
           </div>
-          <div className="h-2 bg-plume-ivory rounded-full overflow-hidden">
+          <div className="h-1.5 bg-plume-ivory rounded-full overflow-hidden">
             <div
               className="h-full bg-plume-gold transition-all duration-300"
               style={{ width: `${progress}%` }}
@@ -163,9 +162,9 @@ const ApplicationForm: React.FC = () => {
 
         {/* Form */}
         <form onSubmit={handleSubmit}>
-          <div className="bg-white rounded-sm border border-plume-gold/20 p-8 mb-6 min-h-[250px]">
+          <div className="bg-white rounded-sm border border-plume-gold/20 p-6 md:p-8 mb-5">
             <label className="block">
-              <span className="text-plume-burgundy font-serif italic text-xl block mb-4">
+              <span className="text-plume-burgundy font-serif italic text-lg md:text-xl block mb-4">
                 {currentQuestion.question}
               </span>
 
@@ -203,11 +202,11 @@ const ApplicationForm: React.FC = () => {
               )}
 
               {currentQuestion.type === 'select' && (
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {currentQuestion.options?.map((option, i) => (
                     <label
                       key={i}
-                      className={`flex items-center p-4 border rounded-sm cursor-pointer transition-all ${
+                      className={`flex items-center p-3.5 border rounded-sm cursor-pointer transition-all text-sm ${
                         formData[currentQuestion.id] === option
                           ? 'border-plume-gold bg-plume-gold/10'
                           : 'border-plume-teal/20 hover:border-plume-gold/50'
@@ -221,7 +220,7 @@ const ApplicationForm: React.FC = () => {
                         onChange={(e) => handleChange(currentQuestion.id, e.target.value)}
                         className="sr-only"
                       />
-                      <span className={`w-4 h-4 rounded-full border-2 mr-3 flex items-center justify-center ${
+                      <span className={`w-4 h-4 rounded-full border-2 mr-3 flex-shrink-0 flex items-center justify-center ${
                         formData[currentQuestion.id] === option
                           ? 'border-plume-gold'
                           : 'border-plume-teal/40'
@@ -254,34 +253,34 @@ const ApplicationForm: React.FC = () => {
               type="button"
               onClick={handlePrev}
               disabled={currentStep === 0}
-              className={`px-6 py-3 font-bold tracking-widest text-xs uppercase transition-all ${
+              className={`px-4 py-2.5 font-semibold tracking-wider text-xs uppercase transition-all ${
                 currentStep === 0
                   ? 'text-plume-charcoal/30 cursor-not-allowed'
                   : 'text-plume-burgundy hover:text-plume-gold'
               }`}
             >
-              ← Back
+              Back
             </button>
 
             {currentStep === QUESTIONS.length - 1 ? (
               <button
                 type="submit"
-                className="bg-plume-gold text-plume-burgundy px-8 py-3 font-bold tracking-widest text-xs uppercase hover:scale-105 transition-transform rounded-sm"
+                className="bg-plume-gold text-plume-burgundy px-6 py-2.5 font-bold tracking-widest text-xs uppercase hover:scale-105 transition-transform rounded-sm"
               >
-                Submit Application
+                Submit
               </button>
             ) : (
               <button
                 type="button"
                 onClick={handleNext}
                 disabled={!formData[currentQuestion.id]}
-                className={`px-8 py-3 font-bold tracking-widest text-xs uppercase transition-all rounded-sm ${
+                className={`px-6 py-2.5 font-bold tracking-widest text-xs uppercase transition-all rounded-sm ${
                   formData[currentQuestion.id]
                     ? 'bg-plume-burgundy text-white hover:bg-opacity-90'
                     : 'bg-plume-charcoal/20 text-plume-charcoal/40 cursor-not-allowed'
                 }`}
               >
-                Next →
+                Next
               </button>
             )}
           </div>

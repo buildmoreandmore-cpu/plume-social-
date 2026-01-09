@@ -38,15 +38,15 @@ const App: React.FC = () => {
         <Hero />
 
         {/* The Brand Foundation */}
-        <section id="about" className="py-24 px-4 bg-plume-cream">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section id="about" className="py-16 md:py-24 px-6 bg-plume-cream">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div className="animate-slide-left">
-                <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">The Foundation</h3>
-                <h2 className="text-plume-burgundy font-serif text-4xl md:text-5xl italic mb-8">
+                <h3 className="text-plume-gold font-sans tracking-[0.3em] text-xs mb-3 uppercase">The Foundation</h3>
+                <h2 className="text-plume-burgundy font-serif text-3xl md:text-4xl lg:text-5xl italic mb-6">
                   Transformation + Indulgence + Sisterhood
                 </h2>
-                <div className="space-y-6 text-plume-charcoal/80 leading-relaxed text-lg">
+                <div className="space-y-5 text-plume-charcoal/80 leading-relaxed text-base md:text-lg">
                   <p>
                     Plume Social isn't just a club—it's a sanctuary. For the woman who has spent decades building, nurturing, and achieving, this is where you finally get to exhale.
                   </p>
@@ -72,35 +72,34 @@ const App: React.FC = () => {
         </section>
 
         {/* Joining the Circle */}
-        <section id="membership" className="py-24 px-4 bg-plume-ivory">
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Access</h3>
-            <h2 className="text-plume-burgundy font-serif text-4xl md:text-5xl italic mb-6">Entry into the Circle</h2>
-            <p className="max-w-2xl mx-auto text-plume-charcoal/70">
-              There are no membership or entry fees. Our sanctuary is gated only by alignment and invitation. 
-              <strong> You must join the circle before you can book a Plume experience.</strong>
+        <section id="membership" className="py-16 md:py-24 px-6 bg-plume-ivory">
+          <div className="max-w-6xl mx-auto text-center mb-12">
+            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-xs mb-3 uppercase">Access</h3>
+            <h2 className="text-plume-burgundy font-serif text-3xl md:text-4xl italic mb-4">Entry into the Circle</h2>
+            <p className="max-w-xl mx-auto text-plume-charcoal/70 text-sm md:text-base">
+              There are no membership or entry fees. Our sanctuary is gated only by alignment and invitation.
             </p>
           </div>
-          
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {MEMBERSHIP_TIERS.map((tier) => (
-              <div key={tier.id} className="bg-white border border-plume-gold/20 rounded-sm overflow-hidden flex flex-col hover:shadow-2xl transition-all group">
-                <div className={`${tier.color} p-10 text-white text-center`}>
-                  <h4 className="font-sans tracking-[0.2em] text-sm mb-2 uppercase">{tier.name}</h4>
-                  <p className="text-3xl font-serif italic mb-2">{tier.price}</p>
-                  <p className="text-xs uppercase tracking-widest opacity-70">Application Based</p>
+              <div key={tier.id} className="bg-white border border-plume-gold/20 rounded-sm overflow-hidden flex flex-col hover:shadow-xl transition-all group">
+                <div className={`${tier.color} p-6 md:p-8 text-white text-center`}>
+                  <h4 className="font-sans tracking-[0.2em] text-xs mb-2 uppercase">{tier.name}</h4>
+                  <p className="text-2xl font-serif italic mb-1">{tier.price}</p>
+                  <p className="text-[10px] uppercase tracking-widest opacity-70">Application Based</p>
                 </div>
-                <div className="p-8 flex-1 flex flex-col">
-                  <p className="text-plume-charcoal font-medium mb-8 text-center italic">{tier.description}</p>
-                  <ul className="space-y-4 mb-10 flex-1">
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-plume-charcoal font-medium mb-6 text-center italic text-sm">{tier.description}</p>
+                  <ul className="space-y-3 mb-6 flex-1">
                     {tier.features.map((feature, i) => (
                       <li key={i} className="flex items-start text-sm text-plume-charcoal/70">
-                        <span className="text-plume-gold mr-3">✦</span>
+                        <span className="text-plume-gold mr-2 text-xs">✦</span>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <a href="#apply" className="w-full py-4 bg-plume-burgundy text-white font-bold tracking-widest text-xs hover:bg-opacity-90 transition-all uppercase block text-center">
+                  <a href="#apply" className="w-full py-3 bg-plume-burgundy text-white font-bold tracking-widest text-xs hover:bg-opacity-90 transition-all uppercase block text-center">
                     Request an Invitation
                   </a>
                 </div>
@@ -116,21 +115,21 @@ const App: React.FC = () => {
         <SampleItinerary />
 
         {/* Education Pillars */}
-        <section id="education" className="py-24 px-4 bg-plume-cream">
-          <div className="max-w-7xl mx-auto text-center mb-16">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Elevation</h3>
-            <h2 className="text-plume-burgundy font-serif text-4xl md:text-5xl italic">Knowledge for the Journey</h2>
+        <section id="education" className="py-16 md:py-24 px-6 bg-plume-cream">
+          <div className="max-w-6xl mx-auto text-center mb-10 md:mb-12">
+            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-xs mb-3 uppercase">Elevation</h3>
+            <h2 className="text-plume-burgundy font-serif text-3xl md:text-4xl italic">Knowledge for the Journey</h2>
           </div>
-          
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {EDUCATIONAL_PILLARS.map((pillar, i) => (
-              <div key={i} className="bg-white p-8 rounded-sm border border-plume-teal/20 hover:border-plume-gold transition-colors">
-                <div className="text-4xl mb-6">{pillar.icon}</div>
-                <h4 className="text-xl font-serif italic text-plume-burgundy mb-6">{pillar.title}</h4>
-                <ul className="space-y-3">
+              <div key={i} className="bg-white p-5 md:p-6 rounded-sm border border-plume-teal/20 hover:border-plume-gold transition-colors">
+                <div className="text-2xl md:text-3xl mb-4 text-plume-burgundy">{pillar.icon}</div>
+                <h4 className="text-base md:text-lg font-serif italic text-plume-burgundy mb-4">{pillar.title}</h4>
+                <ul className="space-y-2">
                   {pillar.topics.map((topic, j) => (
-                    <li key={j} className="text-sm text-plume-charcoal/70 flex items-center">
-                      <span className="w-1.5 h-1.5 rounded-full bg-plume-gold mr-3"></span>
+                    <li key={j} className="text-xs md:text-sm text-plume-charcoal/70 flex items-center">
+                      <span className="w-1 h-1 rounded-full bg-plume-gold mr-2 flex-shrink-0"></span>
                       {topic}
                     </li>
                   ))}
@@ -144,66 +143,62 @@ const App: React.FC = () => {
         <ApplicationForm />
 
         {/* Sponsorship / The Floor */}
-        <section className="py-24 px-4 bg-plume-charcoal text-white relative overflow-hidden">
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-sm mb-4 uppercase">Partnerships</h3>
-            <h2 className="font-serif text-4xl md:text-6xl italic mb-8">Take The Floor</h2>
-            <p className="text-xl text-plume-cream/70 mb-12 leading-relaxed">
-              We curate partners who add value, not noise. Showcase your expertise to a community of high-net-worth Black women leaders in an environment of focus and indulgence.
+        <section className="py-16 md:py-24 px-6 bg-plume-charcoal text-white relative overflow-hidden">
+          <div className="max-w-3xl mx-auto text-center relative z-10">
+            <h3 className="text-plume-gold font-sans tracking-[0.3em] text-xs mb-3 uppercase">Partnerships</h3>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl italic mb-6">Take The Floor</h2>
+            <p className="text-base md:text-lg text-plume-cream/70 mb-8 leading-relaxed">
+              We curate partners who add value, not noise. Showcase your expertise to a community of high-net-worth Black women leaders.
             </p>
-            <button className="bg-plume-gold text-plume-burgundy px-12 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase">
+            <a href="mailto:akua@plumesocialclub.net" className="inline-block bg-plume-gold text-plume-burgundy px-8 py-3 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-xs uppercase">
               Become a Sponsor
-            </button>
+            </a>
           </div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-plume-burgundy rounded-full blur-[100px] opacity-20 -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-plume-gold rounded-full blur-[150px] opacity-10 -ml-48 -mb-48"></div>
+          <div className="absolute top-0 right-0 w-48 h-48 bg-plume-burgundy rounded-full blur-[80px] opacity-20 -mr-24 -mt-24"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-plume-gold rounded-full blur-[100px] opacity-10 -ml-32 -mb-32"></div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-plume-ivory py-20 px-4 border-t border-plume-gold/20">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <footer className="bg-plume-ivory py-12 md:py-16 px-6 border-t border-plume-gold/20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-4">
               <img
                 src="/assets/logo-horizontal.png"
                 alt="Plume Social Club"
-                className="h-14 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
             </div>
-            <p className="text-plume-charcoal/60 max-w-sm mb-8">
-              A private sanctuary for accomplished Black women to navigate their next chapter through shared indulgence and sisterhood. No fees, just intention.
+            <p className="text-plume-charcoal/60 max-w-sm mb-6 text-sm">
+              A private sanctuary for accomplished Black women to navigate their next chapter through shared indulgence and sisterhood.
             </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors">Instagram</a>
-              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors">LinkedIn</a>
-              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors">Facebook</a>
+            <div className="flex space-x-4">
+              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors text-sm">Instagram</a>
+              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors text-sm">LinkedIn</a>
+              <a href="#" className="text-plume-teal hover:text-plume-gold transition-colors text-sm">Facebook</a>
             </div>
           </div>
-          
+
           <div>
-            <h5 className="font-sans tracking-widest text-xs font-bold mb-6 uppercase">Quick Links</h5>
-            <ul className="space-y-4 text-sm text-plume-charcoal/60">
+            <h5 className="font-sans tracking-widest text-xs font-bold mb-4 uppercase">Quick Links</h5>
+            <ul className="space-y-2.5 text-sm text-plume-charcoal/60">
               <li><a href="#about" className="hover:text-plume-gold transition-colors">The Foundation</a></li>
               <li><a href="#membership" className="hover:text-plume-gold transition-colors">The Circle</a></li>
-              <li><a href="#retreats" className="hover:text-plume-gold transition-colors">Luxury Retreats</a></li>
+              <li><a href="#retreats" className="hover:text-plume-gold transition-colors">Retreats</a></li>
               <li><a href="#education" className="hover:text-plume-gold transition-colors">Elevation</a></li>
-              <li><a href="#apply" className="hover:text-plume-gold transition-colors">Request an Invitation</a></li>
             </ul>
           </div>
 
           <div>
-            <h5 className="font-sans tracking-widest text-xs font-bold mb-6 uppercase">Contact</h5>
-            <ul className="space-y-4 text-sm text-plume-charcoal/60">
+            <h5 className="font-sans tracking-widest text-xs font-bold mb-4 uppercase">Contact</h5>
+            <ul className="space-y-2.5 text-sm text-plume-charcoal/60">
               <li><a href="mailto:akua@plumesocialclub.net" className="hover:text-plume-gold transition-colors">akua@plumesocialclub.net</a></li>
-              <li>Atlanta, GA • Tampa, FL • DC</li>
-              <li>Privacy Policy</li>
-              <li>Terms of Membership</li>
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-plume-gold/10 text-center text-xs text-plume-charcoal/40 tracking-widest">
-          © {new Date().getFullYear()} PLUME SOCIAL CLUB. ALL RIGHTS RESERVED. NO ENTRY FEE. INDULGENCE MEETS INTENTION.
+        <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-plume-gold/10 text-center text-[10px] text-plume-charcoal/40 tracking-widest">
+          © {new Date().getFullYear()} PLUME SOCIAL CLUB. ALL RIGHTS RESERVED.
         </div>
       </footer>
 
