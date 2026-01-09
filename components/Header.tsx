@@ -21,7 +21,7 @@ const Header: React.FC = () => {
           </div>
           <div>
             <a href="#apply" className="bg-plume-burgundy text-plume-cream px-6 py-2 rounded-sm text-xs font-bold tracking-widest hover:bg-opacity-90 transition-all inline-block">
-              JOIN THE CIRCLE
+              REQUEST AN INVITATION
             </a>
           </div>
         </div>

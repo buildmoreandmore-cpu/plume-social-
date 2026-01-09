@@ -188,7 +188,7 @@ const App: React.FC = () => {
               <li><a href="#membership" className="hover:text-plume-gold transition-colors">The Circle</a></li>
               <li><a href="#retreats" className="hover:text-plume-gold transition-colors">Luxury Retreats</a></li>
               <li><a href="#education" className="hover:text-plume-gold transition-colors">Elevation</a></li>
-              <li><a href="#apply" className="hover:text-plume-gold transition-colors">Join Us</a></li>
+              <li><a href="#apply" className="hover:text-plume-gold transition-colors">Request an Invitation</a></li>
             </ul>
           </div>
 

@@ -21,12 +21,9 @@ const Hero: React.FC = () => {
         <p className="text-plume-cream/90 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed">
           The private sanctuary for accomplished Black women to exhale, build legacy, and navigate life's finest pleasures together.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="flex items-center justify-center">
           <a href="#apply" className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm">
             REQUEST AN INVITATION
-          </a>
-          <a href="#retreats" className="border border-white text-white px-10 py-4 font-bold tracking-widest rounded-sm hover:bg-white hover:text-plume-burgundy transition-all text-sm">
-            VIEW RETREATS
           </a>
         </div>
       </div>

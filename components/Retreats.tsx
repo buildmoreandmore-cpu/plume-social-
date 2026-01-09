@@ -58,7 +58,7 @@ const Retreats: React.FC = () => {
             onClick={scrollToApply}
             className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase animate-on-scroll"
           >
-            Join The Circle First
+            Request an Invitation
           </button>
         </div>
       </div>
@@ -131,7 +131,7 @@ const Retreats: React.FC = () => {
               onClick={scrollToApply}
               className="bg-plume-gold text-plume-burgundy px-10 py-4 font-bold tracking-widest rounded-sm hover:scale-105 transition-transform text-sm uppercase"
             >
-              Apply to Join
+              Request an Invitation
             </button>
             <a href="mailto:akua@plumesocialclub.net" className="border border-white text-white px-10 py-4 font-bold tracking-widest rounded-sm hover:bg-white hover:text-plume-burgundy transition-all text-sm uppercase">
               Contact Us

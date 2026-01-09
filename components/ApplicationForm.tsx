@@ -4,82 +4,82 @@ import React, { useState } from 'react';
 const QUESTIONS = [
   {
     id: 'name',
-    question: 'What name do you go by, Sister?',
+    question: 'Full Name',
     type: 'text',
-    placeholder: 'Your preferred name'
+    placeholder: 'Your full name'
   },
   {
     id: 'email',
-    question: 'Best email to reach you?',
+    question: 'Email Address',
     type: 'email',
     placeholder: 'your@email.com'
   },
   {
     id: 'phone',
-    question: 'Phone number for our records',
+    question: 'Phone Number',
     type: 'tel',
     placeholder: '(555) 123-4567'
   },
   {
     id: 'city',
-    question: 'Where are you based?',
+    question: 'Location',
     type: 'text',
     placeholder: 'City, State'
   },
   {
     id: 'profession',
-    question: 'What do you do professionally?',
+    question: 'Professional Background',
     type: 'text',
     placeholder: 'Your profession or industry'
   },
   {
     id: 'cigar_experience',
-    question: 'How would you describe your cigar journey?',
+    question: 'What is your experience with cigars?',
     type: 'select',
     options: [
-      'Curious - Never tried, but intrigued',
-      'Social Smoker - Occasionally with friends',
-      'Enthusiast - Regular cigar lover',
-      'Aficionado - Deep appreciation & knowledge'
+      'New to cigars',
+      'Occasional enjoyment',
+      'Regular enthusiast',
+      'Seasoned aficionado'
     ]
   },
   {
     id: 'retreat_interest',
-    question: 'Which retreat experience interests you most?',
+    question: 'Which experiences interest you?',
     type: 'select',
     options: [
-      'Domestic Retreat (Tampa, Miami, Phoenix, etc.)',
-      'International Retreat (Cuba, Dominican Republic, Nicaragua)',
-      'Both - I want to experience it all!'
+      'Domestic retreats',
+      'International retreats',
+      'Both domestic and international'
     ]
   },
   {
     id: 'travel_style',
-    question: 'How do you prefer to travel?',
+    question: 'What is your preferred travel style?',
     type: 'select',
     options: [
-      'Luxury all the way - spare no expense',
-      'Elevated comfort - quality matters',
-      'Experience-focused - memories over amenities'
+      'Luxury accommodations',
+      'Elevated comfort',
+      'Experience-focused'
     ]
   },
   {
     id: 'sisterhood',
-    question: 'What does sisterhood mean to you?',
+    question: 'What are you seeking in a community like Plume Social?',
     type: 'textarea',
-    placeholder: 'In a few words, share what community and connection mean in your life...'
+    placeholder: 'Share what connection and community mean to you...'
   },
   {
     id: 'hear_about',
-    question: 'How did you hear about Plume Social Club?',
+    question: 'How did you learn about Plume Social Club?',
     type: 'select',
     options: [
       'Instagram',
       'Facebook',
       'LinkedIn',
-      'Friend or colleague',
+      'Referral from a friend or colleague',
       'Cigar lounge or event',
-      'Google search',
+      'Online search',
       'Other'
     ]
   }
